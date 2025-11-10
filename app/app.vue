@@ -1,26 +1,18 @@
 <script setup>
-import { ref } from 'vue';
 </script>
 
 <template>
   <div class="glass-container">
-    <div class="decoration"></div>
-    <div class="decoration"></div>
-    <div class="decoration"></div>
-    <div class="decoration"></div>
-
-    <div class="glass-container">
       <div class="glass-panel">
       <h1 class="glass-title">毛玻璃效果区域</h1>
       <p class="glass-subtitle">这是一个具有毛玻璃特效的区域，背景使用了浅蓝色渐变。您可以在此区域放置各种组件，内容将具有半透明模糊效果。</p>
       <div class="placeholder-text">
         这里是组件放置区域
-      </div>
     </div>
   </div></div>
 </template>
 
-<style scoped>
+<style>
 * {
   margin: 0;
   padding: 0;
@@ -39,24 +31,26 @@ body {
 }
 
 .glass-container {
+  width: calc(100vw - 40px);
+  min-height: calc(100vh - 40px);
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 20px;
 }
 
 .glass-panel {
-  width: 80%; /* 调整宽度 */
-  max-width: 100%; /* 最大宽度限制 */
-  height: 300px; 
-  background: rgba(255, 255, 255, 0.2); /* 半透明背景 */
-  backdrop-filter: blur(10px); /* 毛玻璃模糊效果 */
-  -webkit-backdrop-filter: blur(10px); /* Safari支持 */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* 边框增强效果 */
-  border-radius: 15px; /* 圆角 */
-  padding: 30px; /* 内边距 */
+  width: 80vh;
+  max-width: 100vh;
+  height: 80vh; 
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
